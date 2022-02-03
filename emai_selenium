@@ -1,0 +1,31 @@
+# envio_de_email
+# importar pandas
+import pandas as pd
+import pyautogui as gui
+from selenium import webdriver
+from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.common.by import By
+import time
+# Abrir Navegador 
+navegador = webdriver.Chrome() #Chrome tem que se com letra maiuscula
+time.sleep(2)
+
+
+# Link a ser acessado 
+navegador.get("************************************")
+
+
+
+
+# senha do usuario 
+navegador.find_element(By.XPATH,'//*[@id="email"]').send_keys("-----")
+time.sleep(1)
+navegador.find_element(By.XPATH,'//*[@id="password"]').send_keys("-----")
+time.sleep(1)
+navegador.find_element(By.XPATH,'//*[@id="password"]').send_keys(Keys.ENTER)
+time.sleep(1)
+navegador.find_element(By.XPATH,'//*[@id="search"]').send_keys("******************")
+time.sleep(1)
+navegador.find_element(By.XPATH,'//*[@id="search"]').send_keys(Keys.ENTER)
+
+# Não esta abrindo com  a tela cheia :( !
